@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const News = require("../models/news");
+const News = require("../models/News");
 
 
 // LIKE / UNLIKE

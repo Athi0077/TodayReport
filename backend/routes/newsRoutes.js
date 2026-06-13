@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const News = require("../models/news");
+const News = require("../models/News");
 
 const adminMiddleware = require(
   "../middleware/adminMiddleware"
