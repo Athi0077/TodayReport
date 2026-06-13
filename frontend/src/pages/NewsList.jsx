@@ -42,8 +42,8 @@ function NewsList() {
     try {
       const adminId = localStorage.getItem("adminId");
       const url = adminId
-        ? `http://localhost:5000/api/news?adminId=${adminId}`
-        : "http://localhost:5000/api/news";
+        ? `https://todayreport-1.onrender.com/api/news?adminId=${adminId}`
+        : "https://todayreport-1.onrender.com/api/news";
 
       const res = await axios.get(url);
 
@@ -76,7 +76,7 @@ function NewsList() {
       if (isEdit) {
 
         await axios.put(
-          `http://localhost:5000/api/news/${newsForm._id}`,
+          `https://todayreport-1.onrender.com/api/news/${newsForm._id}`,
           newsForm,
           {
             headers: {
@@ -95,7 +95,7 @@ function NewsList() {
         const { _id, ...newsData } = newsForm;
 
         await axios.post(
-          "http://localhost:5000/api/news/add",
+          "https://todayreport-1.onrender.com/api/news/add",
           newsData,
           {
             headers: {
@@ -145,7 +145,7 @@ function NewsList() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/news/${id}`,
+        `https://todayreport-1.onrender.com/api/news/${id}`,
         {
           headers: {
             authorization:

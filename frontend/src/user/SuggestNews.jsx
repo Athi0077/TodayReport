@@ -23,7 +23,7 @@ function SuggestNews() {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:5000/api/suggested/add",
+        "https://todayreport-1.onrender.com/api/suggested/add",
         form
       );
       alert(

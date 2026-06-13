@@ -13,7 +13,7 @@ function SuggestedNews() {
   const getSuggestedNews = async () => {
 
     const res = await axios.get(
-      "http://localhost:5000/api/suggested"
+      "https://todayreport-1.onrender.com/api/suggested"
     );
 
     setSuggested(res.data);
@@ -36,7 +36,7 @@ function SuggestedNews() {
 
       // add to real news collection
       await axios.post(
-        "http://localhost:5000/api/news/add",
+        "https://todayreport-1.onrender.com/api/news/add",
         newsData,
         {
           headers: {
@@ -48,7 +48,7 @@ function SuggestedNews() {
 
       // remove from suggested news collection
       await axios.delete(
-        `http://localhost:5000/api/suggested/${_id}`
+        `https://todayreport-1.onrender.com/api/suggested/${_id}`
       );
 
       // update UI

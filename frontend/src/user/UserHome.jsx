@@ -7,14 +7,14 @@ import "./user.css";
 function UserHome() {
   const navigate = useNavigate();
   const [news, setNews] = useState([]);
-  const [search, setSearch] =useState("");
+  const [search, setSearch] = useState("");
 
   const today = new Date().toISOString().split("T")[0];
   const [date, setDate] = useState(today);
 
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Sports", "Health", "Politics", "Education", "Technology", "Entertainment","General"];
+  const categories = ["All", "Sports", "Health", "Politics", "Education", "Technology", "Entertainment", "General"];
 
 
 
@@ -23,7 +23,7 @@ function UserHome() {
   const getNews = async () => {
 
     const res = await axios.get(
-      "http://localhost:5000/api/news"
+      "https://todayreport-1.onrender.com/api/news"
     );
 
     setNews(res.data);
@@ -89,24 +89,24 @@ function UserHome() {
             </button>
           ))}
         </div>
-       
+
         <div className="filter-section">
 
-        <input
-          type="text"
-          placeholder="Search News"
-          onChange={(e) =>
-            setSearch(e.target.value)}/>
+          <input
+            type="text"
+            placeholder="Search News"
+            onChange={(e) =>
+              setSearch(e.target.value)} />
 
-        <input
-          type="date"
-          value={date}
-          onChange={(e) =>
-            setDate(e.target.value)
-          }
-        />
+          <input
+            type="date"
+            value={date}
+            onChange={(e) =>
+              setDate(e.target.value)
+            }
+          />
 
-      </div>
+        </div>
 
       </div>
 
@@ -150,7 +150,7 @@ function UserHome() {
 
 
       {/* TOP FILTER */}
-      
+
 
 
 

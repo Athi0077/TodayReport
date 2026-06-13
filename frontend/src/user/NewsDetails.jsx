@@ -27,7 +27,7 @@ function NewsDetails() {
   const getSingleNews = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/news/${id}`
+        `https://todayreport-1.onrender.com/api/news/${id}`
       );
       setNews(res.data);
     } catch (error) {
@@ -47,7 +47,7 @@ function NewsDetails() {
     setLikeLoading(true);
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/actions/like/${news._id}`,
+        `https://todayreport-1.onrender.com/api/actions/like/${news._id}`,
         { userId: user._id },
         { headers: { authorization: token } }
       );
@@ -103,7 +103,7 @@ function NewsDetails() {
     setCommentError("");
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/actions/comment/${news._id}`,
+        `https://todayreport-1.onrender.com/api/actions/comment/${news._id}`,
         {
           userId: user._id,
           userName: user.name,

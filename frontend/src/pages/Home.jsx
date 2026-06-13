@@ -25,7 +25,7 @@ function Home() {
   const getNews = async () => {
     const adminId = localStorage.getItem("adminId");
     const res = await axios.get(
-      `http://localhost:5000/api/news?adminId=${adminId}`
+      `https://todayreport-1.onrender.com/api/news?adminId=${adminId}`
     );
     setNews(res.data);
   };
@@ -34,7 +34,7 @@ function Home() {
   const getLatestNews = async () => {
     const adminId = localStorage.getItem("adminId");
     const res = await axios.get(
-      `http://localhost:5000/api/news?adminId=${adminId}`
+      `https://todayreport-1.onrender.com/api/news?adminId=${adminId}`
     );
 
     setLatestNews(res.data.slice(0, 5));
@@ -47,7 +47,7 @@ function Home() {
   const getSuggestedNews = async () => {
 
     const res = await axios.get(
-      "http://localhost:5000/api/suggested"
+      "https://todayreport-1.onrender.com/api/suggested"
     );
 
     setSuggestedNews(res.data.slice(0, 5));
