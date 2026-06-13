@@ -1,0 +1,153 @@
+.home{
+  background:#0f172a;
+  min-height:100vh;
+  color:white;
+}
+
+.dashboard{
+  padding:30px;
+}
+
+.dashboard h1{
+  font-size:40px;
+}
+
+.dashboard p{
+  color:lightgray;
+  margin-top:10px;
+}
+
+
+
+
+/* TOP CARDS */
+.top-cards{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:20px;
+
+  margin-top:40px;
+}
+
+.card-box{
+  background:#1e293b;
+
+  padding:25px;
+
+  border-radius:15px;
+}
+
+.card-box h2{
+  margin-bottom:15px;
+}
+
+
+
+
+/* BOTTOM SECTION */
+.bottom-section{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:20px;
+
+  margin-top:40px;
+}
+
+/*viewallbtn */
+.viewallbtn{
+  margin-left:280px;
+  color:white;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #38bdf8;
+}
+
+
+
+/* RECENT BOX */
+.recent-box{
+  background:#1e293b;
+  padding:20px;
+  border-radius:15px;
+ 
+}
+
+.recent-box h2{
+  margin-bottom:20px;
+}
+
+
+
+
+/* NEWS ITEM */
+.news-item{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:15px 0;
+
+  border-bottom:1px solid #334155;
+}
+
+.news-item h3{
+  color:#38bdf8;
+}
+
+.news-item p{
+  color:lightgray;
+}
+
+
+/* BUTTONS */
+.live-btn{
+  background:#22c55e;
+  color:white;
+  border:none;
+  padding:8px 15px;
+  border-radius:8px;
+}
+
+.pending-btn{
+  background:orange;
+  color:white;
+  border:none;
+  padding:8px 15px;
+  border-radius:8px;
+}
+
+
+
+
+/* MOBILE */
+@media(max-width:900px){
+
+  .bottom-section{
+    grid-template-columns:1fr;
+  }
+
+  .recent-box{
+  background:#1e293b;
+  padding:20px;
+  border-radius:15px;
+  width: 390px;
+  margin-left: -18px;
+}
+
+.recent-box h2{
+  margin-bottom:20px;
+}
+
+.viewallbtn{
+  margin-left: 80px;
+}
+
+}
